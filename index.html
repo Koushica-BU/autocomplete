@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="kbu-autocomplete">
+        <aside>
+            <strong> Autocomplete Search Demo</strong>
+            <p> Implementing Search for the data of user records which includes (Name, email, company name, phone number, address). The order of search results will be in the below order</p>
+            <ul>
+                <li> Name - Starting with search key </li>
+                <li> Name - Contains the search key </li>
+                <li> Any other field data (email,company,address,phone) - Starting with the search key</li>
+                <li> Any other field data (email,company,address,phone) - Containing the search key</li>
+            </ul>
+        </aside>
+        <div class="kbu-search-wrap">
+            <div class="kbu-search"><input class="kbu-input" type="text" placeholder="Type here to search.." id = "searchuser" onkeyup = "searchUsers(this,event)"></div>
+            <div class="kbu-result" id = "result">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
